@@ -1,0 +1,9 @@
+OHLI SOCIAL v3.5.1 — FIX BALAS PESAN CHAT
+
+1. Gesture swipe kanan pada bubble tetap dipertahankan.
+2. Bar kutipan yang tampil kini benar-benar dimasukkan ke isi pesan saat dikirim.
+3. Aksi menu Balas menggunakan target balasan yang sama.
+4. Target pesan dipetakan dari urutan bubble yang sedang dirender dan gesture touchcancel dibersihkan.
+5. Pesan sekali lihat tetap mempertahankan prefix server setelah kutipan balasan.
+
+Pemeriksaan statis bukan bukti uji perangkat. Jalankan uji dua akun di Android: swipe bubble kiri-ke-kanan, ketik, kirim, pastikan kutipan tampil di bubble penerima.

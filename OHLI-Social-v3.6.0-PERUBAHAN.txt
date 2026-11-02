@@ -1,0 +1,22 @@
+OHLI SOCIAL v3.6.0 — PERUBAHAN
+
+1. Feed video pendek (iPhone/mobile)
+- Shell feed fixed memenuhi viewport dengan fallback 100vh dan 100dvh.
+- Stage, daftar reels, video, dan slide video memenuhi tinggi viewport; background hitam menghilangkan strip kosong di bawah.
+- Navigasi bawah tampil sebagai ikon transparan saja, fixed overlay, tanpa border/shadow/backdrop; ikon memakai drop-shadow dan tombol Buat tetap menonjol.
+- Safe-area inset diterapkan untuk home indicator iPhone. viewport-fit=cover tetap aktif dan theme-color menjadi #000000.
+
+2. LIVE fullscreen
+- Tampilan kamera fullscreen object-fit cover dengan mirror hanya untuk kamera depan.
+- Header avatar/nama, viewer count, badge LIVE, menu tiga titik, dan tombol X.
+- Rail mikrofon/ganti kamera untuk host, dan aksi follow/like/share untuk viewer.
+- Komentar overlay fade dengan mask-image, input pill fixed bawah dan font 16px. visualViewport dipakai untuk mengimbangi keyboard Safari.
+- Pengaturan siaran di bottom sheet dengan backdrop, swipe turun, tap di luar, dan transisi.
+- Kamera gagal menampilkan overlay Coba lagi; X dan Akhiri LIVE membuka dialog konfirmasi khusus.
+- Jumlah awal penonton 0; server viewerCount menghitung peserta penonton saja dan tidak memasukkan host.
+
+3. Batas teknis
+- Tidak ada perubahan signaling/API/WebRTC atau sistem login. WebRTC tetap P2P seperti implementasi sebelumnya, bukan SFU.
+- Belum ada tes perangkat fisik atau build APK pada lingkungan ini. Harap uji di iPhone Safari dan Android Chrome sebelum mengganti APK aktif.
+
+File utama: app/src/main/assets/index.html. Versi Android: versionCode 29, versionName 3.6.0.

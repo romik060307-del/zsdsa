@@ -1,0 +1,35 @@
+OHLI SOCIAL v3.5.2 — PERBAIKAN TERARAH
+
+Basis source: OHLI Social v3.5.1 yang diberikan pengguna.
+Perubahan hanya menyentuh Video Pendek, menu Bagikan, Studio LIVE, dan editor upload.
+
+1. Video Pendek / Download
+- Tombol Download terpisah di rail Video Pendek dihapus.
+- Pilihan Download dipindahkan ke dalam menu Bagikan.
+- Opsi hanya muncul jika postingan video mengizinkan unduhan.
+- Aksi memakai fungsi downloadVideoWithWatermark yang sudah ada dan tetap menghormati izin pemilik.
+- Pilihan WhatsApp, Salin tautan, Lainnya, dan Bagikan ke teman tetap dipertahankan.
+
+2. LIVE
+- Lapisan CSS terakhir membuat kontrol, komentar, chip akun, dan studio menggunakan permukaan solid.
+- Efek blur/transparansi pada elemen kontrol dihilangkan.
+- Fungsi WebRTC, kamera, mikrofon, kualitas, rotasi kamera, komentar, like, share, dan tutup LIVE tidak diubah.
+
+3. Video Pendek / Toolbar bawah
+- Tidak mengubah rute navigasi atau handler ikon yang sudah ada.
+- Mode navigasi transparan yang sudah tersedia tetap mempertahankan ikon; tidak ada tombol navigasi yang dihapus.
+
+4. Editor upload
+- Toolbar Teks, Stiker, Potong, Crop, Suara, Tambah Musik, dan Hapus dibungkus dalam scroller horizontal.
+- Swipe horizontal didukung di HP; mouse/trackpad tetap dapat menggeser di desktop.
+- Scroll vertikal halaman tetap tersedia.
+
+5. Tombol Bagikan
+- Baris audiens, izin unduh, Simpan Draf, Ganti, dan Bagikan ditata menjadi grid responsif di HP.
+- Tombol Bagikan mendapat satu baris penuh pada layar sempit agar tidak terpotong.
+- Layout desktop tetap menggunakan alur flex yang sudah ada.
+
+Pemeriksaan:
+- node --check app/src/main/assets/ohli-social.js
+- node tools/source-verify.mjs
+- Pemeriksaan statis bukan pengganti uji kamera, WebRTC, unduh aktual, atau sentuhan di HP.

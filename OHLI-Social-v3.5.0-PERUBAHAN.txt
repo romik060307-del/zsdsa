@@ -1,0 +1,29 @@
+OHLI SOCIAL v3.5.0 — PEMBARUAN TERARAH
+
+Perubahan:
+- Resolver tombol Chat dari profil memakai runtime request dengan token sesi; keamanan autentikasi server tetap dipertahankan.
+- Chat memakai scroll awal media-aware dan tombol Pesan terbaru saat pengguna membaca riwayat lama.
+- Impor stiker mempunyai pratinjau, simpan server, koleksi Stiker Saya/Favorit, dan hapus stiker sendiri dengan proteksi komentar yang sudah memakai media.
+- Audio impor tersimpan sebagai file dan metadata server, ditampilkan di Audio Saya, memuat durasi, dapat diputar/dipakai ulang, dan dihapus bila belum dipakai postingan.
+- UI LIVE diperbarui ke layout vertikal dengan komentar overlay dan rail interaksi; signaling WebRTC P2P tetap digunakan.
+- Tombol Download Reels dipindah ke posisi lebih atas.
+- Preferensi latar navigasi Reels Hitam/Transparan tersimpan per browser; ikon tetap terlihat.
+- Tema Orange ditambahkan sebagai aksen tambahan tanpa menghapus Light/Dark.
+
+File utama yang berubah:
+- app/src/main/assets/index.html
+- app/src/main/assets/ohli-social.js
+- app/src/main/assets/ohli-social.css
+- app/src/main/java/com/rk/server/ServerService.java
+- app/build.gradle
+- .github/workflows/build-apk.yml
+- tools/source-verify.mjs
+- README.md
+- docs/API.md
+- docs/V3.5-TEST-PLAN.md
+
+Catatan:
+- Build APK dan pengujian runtime Android/iPhone belum dilakukan karena Android SDK/Gradle dan perangkat uji tidak tersedia.
+- LIVE masih WebRTC P2P, bukan SFU/relay untuk penonton skala besar.
+- Watermark unduhan memakai Canvas/MediaRecorder; kompatibilitas codec bergantung browser/perangkat.
+- Data stiker/audio disimpan pada server OHLI di perangkat host, bukan cloud terdistribusi.

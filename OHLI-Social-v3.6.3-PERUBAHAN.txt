@@ -1,0 +1,48 @@
+OHLI SOCIAL v3.6.3 — PERBAIKAN CHAT PROFIL, LIVE, DAN WARNA TEMA
+
+Basis source: OHLI Social v3.6.2.
+Perubahan dibatasi pada pemilihan target Chat dari profil, pintasan pengaturan LIVE, dan pengaturan warna ikon/tulisan.
+
+1. Chat dari profil teman
+- Tombol Chat membawa Social ID milik profil yang sedang dibuka, bukan mengandalkan profil sebelumnya.
+- Handler memprioritaskan Social ID dari tombol yang benar-benar ditekan, kemudian melakukan resolve melalui endpoint Chat resmi.
+- Nomor peer divalidasi dan tidak boleh sama dengan akun sendiri.
+- Request ID tetap mencegah hasil resolve lama membuka percakapan yang sudah tidak dipilih.
+- Runtime membuka peer spesifik dan menyegarkan daftar pesan server untuk peer yang sama.
+- Autentikasi token dan pemeriksaan izin DM/block di server tidak dilewati atau dihapus.
+
+2. Tombol tiga titik LIVE
+- Tombol tiga titik tetap memakai elemen <details>/<summary> dan handler lama.
+- Pada tahap pratinjau/persiapan, tombol menu dibuat terlihat.
+- Menekan tombol membuka sheet pengaturan yang berisi judul, deskripsi, audiens, kualitas kamera, izin komentar, dan tombol Mulai LIVE.
+- Saat siaran berlangsung, fungsi kamera, mikrofon, ganti kamera, komentar, dan Akhiri LIVE tetap menggunakan handler WebRTC lama.
+
+3. Warna ikon dan tulisan
+- Pengaturan Tema menambahkan pemilih warna ikon dan warna tulisan.
+- Pilihan disimpan di localStorage browser/perangkat dan dipulihkan sesudah reload.
+- Warna diterapkan pada UI Social dan Chat yang sudah ada; tidak mengubah layout atau API akun.
+- Reset mengembalikan warna bawaan. Tema Terang, Malam, dan Orange tetap tersedia.
+
+4. Ikon putih
+- Ikon tombol tambah dan lonceng notifikasi pada tampilan video pendek dibuat putih tanpa mengubah handler navigasi/notifikasi.
+
+File diubah
+- app/src/main/assets/ohli-social.js
+- app/src/main/assets/index.html
+- app/src/main/java/com/rk/server/ServerService.java
+- app/build.gradle
+- .github/workflows/build-apk.yml
+- tools/source-verify.mjs
+- README.md
+
+Pemeriksaan source
+- node --check app/src/main/assets/ohli-social.js: lulus
+- node --check tools/source-verify.mjs: lulus
+- node --check tools/smoke-test.mjs: lulus
+- node tools/source-verify.mjs: 111 pemeriksaan statis lulus
+
+Batas pengujian
+- Build APK belum dijalankan di lingkungan ini.
+- Tes runtime dua akun belum dijalankan pada server aktif.
+- Uji kamera, menu LIVE, sentuhan dan warna Chat/Social pada iPhone Safari serta Android Chrome tetap diperlukan.
+- Warna kustom disimpan lokal per browser/perangkat, tidak disinkronkan ke akun/perangkat lain.

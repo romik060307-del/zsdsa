@@ -1,0 +1,21 @@
+OHLI SOCIAL v3.6.1 — PENYESUAIAN UI TERARAH
+
+Basis source: OHLI-Social-Source-v3.6.0.zip.
+
+Perubahan:
+1. Feed video pendek tetap full-bleed pada layar mobile, dengan latar hitam,
+   video cover, navigasi ikon transparan, dan safe-area iPhone.
+2. LIVE fullscreen tetap memakai komponen dan handler lama. Bottom sheet
+   Pengaturan Siaran sekarang tertutup saat pertama kali membuka LIVE dan
+   hanya tampil setelah tombol menu tiga titik ditekan.
+3. Saat bottom sheet tertutup, panel dan backdrop dipastikan tidak menangkap
+   sentuhan atau menutupi tampilan LIVE.
+4. Tidak ada perubahan login, feed data, upload, signaling, WebRTC, komentar,
+   kamera, mikrofon, atau API.
+
+Versi Android: versionCode 30, versionName 3.6.1.
+
+Batas pengujian:
+Pemeriksaan source bukan tes perangkat. Uji iPhone Safari dan Android Chrome
+tetap diperlukan untuk safe-area, address bar dinamis, kamera, keyboard,
+bottom sheet, dan WebRTC.

@@ -1,0 +1,14 @@
+OHLI SOCIAL v3.6.4 — PERBAIKAN PERTEMANAN
+
+- Menambahkan backend pertemanan tersendiri: permintaan, terima, tolak, batal, daftar teman, dan hapus teman.
+- Data relasi baru disimpan pada ohli-friends.json dan tidak menimpa file follow, kontak, chat, feed, story, atau audio lama.
+- Menambahkan halaman Teman dan tombol pengelolaan relasi di profil.
+- ID publik OHLI dipakai di daftar dan tombol Social; nomor telepon privat tidak ditampilkan sebagai identitas.
+- Permintaan ganda dicegah dan pengiriman dibatasi 30 permintaan tertunda per 24 jam per akun.
+- Relasi lama berdasarkan mutual-follow/kontak tetap dikenali.
+- VersionCode 33, versionName 3.6.4.
+
+BELUM DIIMPLEMENTASIKAN / BELUM DIUJI
+- LIVE multi-pengguna dengan beberapa kamera dua arah masih membutuhkan signaling peserta, alur persetujuan host, dan arsitektur media yang sesuai.
+- Random Live Match dan fitur sosial tahap berikutnya belum tersedia.
+- Smoke test runtime dua akun, build APK, serta uji kamera/mikrofon di HP belum dijalankan.

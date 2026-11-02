@@ -1,0 +1,15 @@
+OHLI Social v3.6.2 — pembaruan tampilan mobile LIVE dan video pendek
+
+Basis source: v3.6.1. Perubahan fungsional hanya pada app/build.gradle (versionCode 31, versionName 3.6.2); logika aplikasi tidak diubah.
+
+File tampilan yang diubah:
+- app/src/main/assets/ohli-social.css
+
+Penyesuaian:
+- Video pendek dibuat full-bleed fixed viewport pada halaman videos, termasuk safe-area iPhone.
+- Navigasi bawah menjadi ikon transparan melayang tanpa panel, border, shadow panel, atau blur.
+- LIVE memakai stage fullscreen dan video cover, overlay komentar, input 16px, kontrol atas/samping, serta sheet pengaturan yang memanfaatkan elemen dan handler lama.
+- Tahap persiapan LIVE menampilkan pengaturan yang sudah ada di dock bawah.
+- Tidak ada perubahan pada JavaScript, API, autentikasi, feed data, atau WebRTC.
+
+Catatan batasan: karena diminta CSS/layout saja, mirroring kamera depan secara kondisional, drag-to-dismiss sheet, serta pengaturan keyboard melalui visualViewport tidak ditambahkan sebagai logika baru. Tombol dan handler lama tetap digunakan. Uji langsung di Safari iOS dan Chrome Android tetap wajib.
